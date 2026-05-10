@@ -1,104 +1,114 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ahmed Elbrmawy | Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Loading -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor"></div>
+
   <!-- Background -->
-  <div class="bg-blur blur1"></div>
-  <div class="bg-blur blur2"></div>
+  <div class="bg-grid"></div>
 
   <!-- Header -->
   <header class="header">
     <div class="container nav-container">
 
-      <div class="logo-wrapper">
-        <img src="logo Portfolio.png" alt="Ahmed Elbrmawy Logo" class="main-logo">
+      <div class="logo-area">
+        <img src="logo Portfolio.png" alt="Logo" class="logo">
+        <div>
+          <h2>Ahmed Elbrmawy</h2>
+          <span>AI Engineer</span>
+        </div>
       </div>
 
-      <nav class="navbar">
-        <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
-        <a href="#about" data-en="About" data-ar="من أنا">About</a>
-        <a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a>
-        <a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
-        <a href="#certifications" data-en="Certificates" data-ar="الشهادات">Certificates</a>
-        <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+      <nav class="navbar" id="navbar">
+        <a href="#home" class="nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="#about" class="nav-link" data-en="About" data-ar="نبذة عني">About</a>
+        <a href="#skills" class="nav-link" data-en="Skills" data-ar="المهارات">Skills</a>
+        <a href="#projects" class="nav-link" data-en="Projects" data-ar="المشاريع">Projects</a>
+        <a href="#certifications" class="nav-link" data-en="Certificates" data-ar="الشهادات">Certificates</a>
+        <a href="#contact" class="nav-link" data-en="Contact" data-ar="تواصل">Contact</a>
       </nav>
 
-      <button id="langToggle" class="lang-btn">AR</button>
+      <div class="header-actions">
+        <button id="langToggle" class="lang-btn">AR</button>
+        <button id="menuBtn" class="menu-btn">☰</button>
+      </div>
 
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- Hero -->
   <section class="hero" id="home">
 
     <div class="container hero-container">
 
-      <div class="hero-left">
+      <div class="hero-content fade-up">
 
-        <span class="tag" data-en="AI Engineer Portfolio" data-ar="بورتفوليو مهندس ذكاء اصطناعي">
-          AI Engineer Portfolio
-        </span>
+        <div class="badge">
+          <span></span>
+          <p data-en="Premium Portfolio Website" data-ar="موقع بورتفوليو احترافي">
+            Premium Portfolio Website
+          </p>
+        </div>
 
         <h1>
-          <span data-en="Ahmed Elbrmawy" data-ar="أحمد البرماوي">
-            Ahmed Elbrmawy
+          <span data-en="Hello, I'm" data-ar="مرحباً، أنا">
+            Hello, I'm
           </span>
+          <br>
+          Ahmed Elbrmawy
         </h1>
 
-        <h2 data-en="Software & Digital Solutions Specialist"
-            data-ar="متخصص حلول البرمجيات والتسويق الرقمي">
-          Software & Digital Solutions Specialist
-        </h2>
+        <h3 id="typing"></h3>
 
-        <p data-en="Professional portfolio with premium digital solutions, web development, SEO, software systems, AI tools and business growth services."
-           data-ar="بورتفوليو احترافي يقدم حلول رقمية متكاملة تشمل تطوير المواقع والبرمجيات وتحسين محركات البحث وأدوات الذكاء الاصطناعي.">
-          Professional portfolio with premium digital solutions, web development, SEO, software systems, AI tools and business growth services.
+        <p class="hero-text"
+          data-en="Professional AI Engineer passionate about building modern intelligent systems, web applications and premium digital experiences."
+          data-ar="مهندس ذكاء اصطناعي محترف شغوف ببناء الأنظمة الذكية الحديثة وتطوير تطبيقات الويب وتجارب رقمية احترافية.">
+          Professional AI Engineer passionate about building modern intelligent systems.
         </p>
 
         <div class="hero-buttons">
-          <a href="#contact" class="btn primary"
-             data-en="Hire Me"
-             data-ar="تواصل معي">
-             Hire Me
+          <a href="#contact" class="btn primary-btn"
+            data-en="Hire Me"
+            data-ar="تواصل معي">
+            Hire Me
           </a>
 
-          <a href="Ahmed_Elbrmawy_CV.pdf" download class="btn secondary"
-             data-en="Download CV"
-             data-ar="تحميل السيرة الذاتية">
-             Download CV
+          <a href="Ahmed_Elbrmawy_CV.pdf" download class="btn secondary-btn"
+            data-en="Download CV"
+            data-ar="تحميل السيرة الذاتية">
+            Download CV
           </a>
         </div>
 
         <div class="socials">
-          <a href="https://linkedin.com/in/ahmed-elbrmawy/" target="_blank">LinkedIn</a>
-          <a href="https://ahmedelbrmawy-eg.github.io/Portfolio/" target="_blank">Portfolio</a>
-          <a href="mailto:ahmedelbrmawy.vip.business@outlook.sa">Email</a>
+          <a href="https://github.com/" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+          <a href="https://instagram.com/" target="_blank">Instagram</a>
+          <a href="mailto:example@gmail.com">Email</a>
         </div>
 
       </div>
 
-      <div class="hero-right">
+      <div class="hero-image fade-up delay">
 
-        <div class="profile-card">
-          <div class="circle"></div>
-
-          <img src="Ahmed Elbrmawy.png"
-               alt="Ahmed Elbrmawy"
-               class="profile-img">
-
+        <div class="image-wrapper">
+          <img src="Ahmed Elbrmawy.png" alt="Ahmed Elbrmawy">
         </div>
 
       </div>
@@ -107,40 +117,22 @@
 
   </section>
 
-  <!-- ABOUT -->
+  <!-- About -->
   <section class="section" id="about">
 
     <div class="container">
 
       <div class="section-title">
-        <span data-en="About Me" data-ar="من أنا">About Me</span>
+        <h2 data-en="About Me" data-ar="نبذة عني">About Me</h2>
       </div>
 
-      <div class="about-box">
+      <div class="about-card fade-up">
 
-        <p data-en="Software and Digital Solutions Specialist with experience in software development, web systems, digital marketing, SEO, tourism services, and business management."
-           data-ar="متخصص في البرمجيات والحلول الرقمية بخبرة في تطوير البرمجيات والمواقع والتسويق الرقمي وتحسين محركات البحث وإدارة الأنظمة والخدمات السياحية.">
-          Software and Digital Solutions Specialist with experience in software development, web systems, digital marketing, SEO, tourism services, and business management.
+        <p
+          data-en="I am Ahmed Elbrmawy, a passionate AI Engineer and Frontend Developer focused on creating premium digital experiences, modern user interfaces and advanced intelligent systems."
+          data-ar="أنا أحمد البرماوي، مهندس ذكاء اصطناعي ومطور واجهات أمامية شغوف بإنشاء تجارب رقمية احترافية وواجهات حديثة وأنظمة ذكية متقدمة.">
+          I am Ahmed Elbrmawy, a passionate AI Engineer and Frontend Developer.
         </p>
-
-        <div class="about-grid">
-
-          <div class="about-card">
-            <h3>5+</h3>
-            <span data-en="Years Experience" data-ar="سنوات خبرة">Years Experience</span>
-          </div>
-
-          <div class="about-card">
-            <h3>50+</h3>
-            <span data-en="Projects Completed" data-ar="مشروع مكتمل">Projects Completed</span>
-          </div>
-
-          <div class="about-card">
-            <h3>100%</h3>
-            <span data-en="Client Satisfaction" data-ar="رضا العملاء">Client Satisfaction</span>
-          </div>
-
-        </div>
 
       </div>
 
@@ -148,29 +140,25 @@
 
   </section>
 
-  <!-- SKILLS -->
+  <!-- Skills -->
   <section class="section" id="skills">
 
     <div class="container">
 
       <div class="section-title">
-        <span data-en="Skills" data-ar="المهارات">Skills</span>
+        <h2 data-en="Skills" data-ar="المهارات">Skills</h2>
       </div>
 
       <div class="skills-grid">
 
-        <div class="skill-card">HTML5</div>
-        <div class="skill-card">CSS3</div>
-        <div class="skill-card">JavaScript</div>
-        <div class="skill-card">Python</div>
-        <div class="skill-card">PHP</div>
-        <div class="skill-card">WordPress</div>
-        <div class="skill-card">SEO</div>
-        <div class="skill-card">AI Tools</div>
-        <div class="skill-card">Digital Marketing</div>
-        <div class="skill-card">Google Analytics</div>
-        <div class="skill-card">Databases</div>
-        <div class="skill-card">UI/UX</div>
+        <div class="skill-card fade-up">HTML5</div>
+        <div class="skill-card fade-up">CSS3</div>
+        <div class="skill-card fade-up">JavaScript</div>
+        <div class="skill-card fade-up">AI</div>
+        <div class="skill-card fade-up">Python</div>
+        <div class="skill-card fade-up">Machine Learning</div>
+        <div class="skill-card fade-up">UI / UX</div>
+        <div class="skill-card fade-up">Responsive Design</div>
 
       </div>
 
@@ -178,36 +166,30 @@
 
   </section>
 
-  <!-- PROJECTS -->
+  <!-- Projects -->
   <section class="section" id="projects">
 
     <div class="container">
 
       <div class="section-title">
-        <span data-en="Projects" data-ar="المشاريع">Projects</span>
+        <h2 data-en="Projects" data-ar="المشاريع">Projects</h2>
       </div>
 
       <div class="projects-grid">
 
-        <div class="project-card">
-          <h3>AI Website Solutions</h3>
-          <p>
-            Modern responsive websites with AI integrations and advanced UI systems.
-          </p>
+        <div class="project-card fade-up">
+          <h3>AI Assistant</h3>
+          <p>Modern intelligent chatbot system.</p>
         </div>
 
-        <div class="project-card">
-          <h3>SEO & Marketing</h3>
-          <p>
-            SEO optimization and digital campaigns for business growth.
-          </p>
+        <div class="project-card fade-up">
+          <h3>Portfolio Website</h3>
+          <p>Premium responsive modern portfolio.</p>
         </div>
 
-        <div class="project-card">
-          <h3>Software Systems</h3>
-          <p>
-            Cross-platform software systems and database management solutions.
-          </p>
+        <div class="project-card fade-up">
+          <h3>Dashboard System</h3>
+          <p>Interactive analytics dashboard.</p>
         </div>
 
       </div>
@@ -216,31 +198,27 @@
 
   </section>
 
-  <!-- CERTIFICATIONS -->
+  <!-- Certifications -->
   <section class="section" id="certifications">
 
     <div class="container">
 
       <div class="section-title">
-        <span data-en="Certifications" data-ar="الشهادات">Certifications</span>
+        <h2 data-en="Certifications" data-ar="الشهادات">Certifications</h2>
       </div>
 
       <div class="cert-grid">
 
-        <div class="cert-card">
-          Google Analytics Certifications
+        <div class="cert-card fade-up">
+          AI Engineering Certificate
         </div>
 
-        <div class="cert-card">
-          Google SEO Professional
+        <div class="cert-card fade-up">
+          Frontend Development
         </div>
 
-        <div class="cert-card">
-          ICDL & HR Certifications
-        </div>
-
-        <div class="cert-card">
-          Software Innovation Award
+        <div class="cert-card fade-up">
+          Machine Learning
         </div>
 
       </div>
@@ -249,35 +227,28 @@
 
   </section>
 
-  <!-- CONTACT -->
+  <!-- Contact -->
   <section class="section" id="contact">
 
     <div class="container">
 
       <div class="section-title">
-        <span data-en="Contact Me" data-ar="تواصل معي">Contact Me</span>
+        <h2 data-en="Contact Me" data-ar="تواصل معي">Contact Me</h2>
       </div>
 
-      <div class="contact-box">
+      <div class="contact-box fade-up">
 
-        <div class="contact-item">
-          <h3>Email</h3>
-          <a href="mailto:ahmedelbrmawy.vip.business@outlook.sa">
-            ahmedelbrmawy.vip.business@outlook.sa
-          </a>
-        </div>
+        <a href="mailto:example@gmail.com" class="contact-item">
+          📧 example@gmail.com
+        </a>
 
-        <div class="contact-item">
-          <h3>Phone</h3>
-          <span>+20 155 193 4460</span>
-        </div>
+        <a href="https://linkedin.com/" target="_blank" class="contact-item">
+          🔗 LinkedIn
+        </a>
 
-        <div class="contact-item">
-          <h3>LinkedIn</h3>
-          <a href="https://linkedin.com/in/ahmed-elbrmawy/" target="_blank">
-            linkedin.com/in/ahmed-elbrmawy
-          </a>
-        </div>
+        <a href="https://github.com/" target="_blank" class="contact-item">
+          💻 GitHub
+        </a>
 
       </div>
 
@@ -285,37 +256,52 @@
 
   </section>
 
- <!-- chatbot -->
-<div class="chatbot">
-
-    <div class="chat-header">
-        <h3>AI Assistant</h3>
-
-        <div class="chat-controls">
-            <button id="minimizeChat" class="chat-btn">−</button>
-            <button id="closeChat" class="chat-btn">✕</button>
-        </div>
-    </div>
-
-    <div class="chat-body">
-        <div class="message">
-            Welcome 👋 <br>
-            How can I help you?
-        </div>
-    </div>
-
-    <div class="chat-footer">
-        <input type="text" placeholder="Type your message...">
-        <button>➜</button>
-    </div>
-
-</div>
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="footer">
-    © 2026 Ahmed Elbrmawy — Premium Portfolio
+    <p>
+      © 2026 Ahmed Elbrmawy — Premium Portfolio
+    </p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Chatbot -->
+  <div class="chatbot-container" id="chatbot">
 
+    <div class="chatbot-header">
+
+      <div>
+        <h3>AI Chatbot</h3>
+      </div>
+
+      <div class="chat-controls">
+        <button id="minimizeChat">—</button>
+        <button id="closeChat">✕</button>
+      </div>
+
+    </div>
+
+    <div class="chat-body" id="chatBody">
+
+      <div class="bot-message">
+        👋 Hello Ahmed! Welcome to your premium portfolio.
+      </div>
+
+    </div>
+
+    <div class="chat-input-area">
+
+      <input type="text" id="chatInput" placeholder="Type a message...">
+
+      <button id="sendBtn">Send</button>
+
+    </div>
+
+  </div>
+
+  <!-- Chat Button -->
+  <button class="chat-open-btn" id="chatOpenBtn">
+    💬
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
