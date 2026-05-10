@@ -107,3 +107,30 @@ userInput.addEventListener("keypress", (e) => {
   }
 
 });
+const chatbot = document.querySelector(".chatbot");
+const chatBody = document.querySelector(".chat-body");
+const chatFooter = document.querySelector(".chat-footer");
+
+const minimizeBtn = document.getElementById("minimizeChat");
+const closeBtn = document.getElementById("closeChat");
+
+/* تصغير المحادثة */
+minimizeBtn.addEventListener("click", () => {
+
+    chatbot.classList.toggle("minimized");
+
+    if(chatbot.classList.contains("minimized")){
+        chatBody.style.display = "none";
+        chatFooter.style.display = "none";
+        minimizeBtn.innerHTML = "+";
+    } else {
+        chatBody.style.display = "block";
+        chatFooter.style.display = "flex";
+        minimizeBtn.innerHTML = "−";
+    }
+});
+
+/* غلق المحادثة */
+closeBtn.addEventListener("click", () => {
+    chatbot.style.display = "none";
+});
